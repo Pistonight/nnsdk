@@ -18,7 +18,7 @@ jobs:
       - name: Install libc++ headers
         run: |
           sudo apt-get update
-          sudo apt-get install -y libc++-dev libc++abi-dev
+          sudo apt-get install -y libc6-dev libc++-dev libc++abi-dev
       - uses: egor-tensin/setup-clang@v2
         with:
           version: "22"
