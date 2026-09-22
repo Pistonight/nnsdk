@@ -128,6 +128,7 @@ include/nn/util/util_ResDic.h
 include/nn/util/util_StringUtil.h
 include/nn/util/util_StringView.h
 include/nn/util/util_TypedStorage.h
+include/nn/vi.h
 include/nn/xcd.h
 
 # SOURCES_END
