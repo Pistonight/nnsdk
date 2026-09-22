@@ -146,7 +146,7 @@ namespace nn {
         if (!ResultSuccess::CanAccept(*this)) {
             result::detail::OnUnhandledResult(*this);
         }
-        return ResultSuccess();
+        return {};
     }
 
     namespace result::detail {
@@ -181,7 +181,7 @@ namespace nn {
                     return result.GetModule() == Module && DescriptionStart <= result.GetDescription() && result.GetDescription() < DescriptionEnd;
                 }
 
-                friend bool operator <=(Result result, ErrorRange) noexcept {
+                friend bool operator <=(Result result, ErrorRange _) noexcept {
                     return Includes(result);
                 }
         };
@@ -198,12 +198,12 @@ namespace nn {
 #define R_DEFINE_ERROR_RESULT_IMPL(name, desc_start, desc_end)                                               \
     class Result##name :                                                                                     \
         public ::nn::result::detail::ErrorResultBase<R_CURRENT_NAMESPACE_RESULT_MODULE, desc_start>,         \
-        public ::nn::result::detail::ErrorRange<R_CURRENT_NAMESPACE_RESULT_MODULE, desc_start, desc_end + 1> \
+        public ::nn::result::detail::ErrorRange<R_CURRENT_NAMESPACE_RESULT_MODULE, desc_start, (desc_end) + 1> \
         {}
 
 #define R_DEFINE_ABSTRACT_ERROR_RESULT_IMPL(name, desc_start, desc_end) \
     class Result##name :                                                                                     \
-        public ::nn::result::detail::ErrorRange<R_CURRENT_NAMESPACE_RESULT_MODULE, desc_start, desc_end + 1> \
+        public ::nn::result::detail::ErrorRange<R_CURRENT_NAMESPACE_RESULT_MODULE, desc_start, (desc_end) + 1> \
         {}
 
 

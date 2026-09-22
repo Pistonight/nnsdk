@@ -1,5 +1,8 @@
 version: '3'
 
+vars:
+  SOURCES: src include/nn
+
 tasks:
   configure:
     desc: Configure CMake
@@ -13,21 +16,30 @@ tasks:
   check:
     desc: Run clang-format and clang-tidy checks
     cmds:
-      - task: _clang-format
-        vars:
-          ARGS: -n -Werror
+      - task: clang-format
+        vars: { ARGS: -n -Werror }
+      - task: clang-tidy
   fix:
     desc: Run clang-format to format the code
     cmds:
-      - task: _clang-format
-        vars:
-          ARGS: -i
+      - task: clang-format
+        vars: { ARGS: -i }
 
-  _clang-format:
+  clang-format:
     cmds:
       - > 
-        find src include/nn
+        find {{.SOURCES}}
         -regextype posix-extended
         -regex '.*\.[ch](\+\+|pp|xx|c|h)?'
         | xargs -P {{numCPU}} -n 1
         clang-format {{.ARGS}}
+  clang-tidy:
+    cmds:
+      - >
+        find {{.SOURCES}}
+        -regextype posix-extended
+        -regex '.*\.[ch](\+\+|pp|xx|c|h)?'
+        | xargs -P {{numCPU}} -n 1
+        clang-tidy --warnings-as-errors='*' --header-filter='include/nn'
+        -p build
+        --quiet
