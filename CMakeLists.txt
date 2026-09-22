@@ -30,6 +30,9 @@ include/nn/bcat/detail/bcat_Ipc.h
 include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
 include/nn/bcat.h
 include/nn/crypto.h
+include/nn/diag.h
+include/nn/err.h
+include/nn/friends.h
 include/nn/fs/fs_Bcat.h
 include/nn/fs/fs_Directories.h
 include/nn/fs/fs_Files.h
@@ -57,6 +60,7 @@ include/nn/os/os_Mutex.h
 include/nn/os/os_MutexTypes.h
 include/nn/os/os_ThreadCommon.h
 include/nn/os/os_ThreadTypes.h
+include/nn/settings.h
 include/nn/time.h
 include/nn/util/detail/util_ArithmeticImpl.h
 include/nn/util/detail/util_TypeTraits.h
