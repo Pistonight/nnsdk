@@ -14,8 +14,17 @@ jobs:
       - uses: egor-tensin/setup-clang@v2
         with:
           version: "22"
-      - uses: go-task/setup-task@v2
       - run: |
+          BINDIR="$HOME/.local/bin/ccpp-lint"
+          mkdir -p "$BINDIR"
+          BASE_URL="https://github.com/cpp-linter/clang-tools-static-binaries/releases/latest/download"
+          curl -fsSL "$BASE_URL/clang-format-22_linux-amd64" -o "$BINDIR/clang-format"
+          curl -fsSL "$BASE_URL/clang-tidy-22_linux-amd64" -o "$BINDIR/clang-tidy"
+          chmod +x "$BINDIR/clang-format" "$BINDIR/clang-tidy"
+          echo "$HOME/.local/bin/ccpp-lint" >> "$GITHUB_PATH"
+      - uses: go-task/setup-task@v2
+      - name: Run task pr
+        run: |
           clang --version
           clang-format --version
           clang-tidy --version
