@@ -23,6 +23,14 @@ include/nn/bcat/detail/bcat_Error.h
 include/nn/bcat/detail/bcat_Ipc.h
 include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
 include/nn/bcat.h
+include/nn/fs/fs_Bcat.h
+include/nn/fs/fs_Directories.h
+include/nn/fs/fs_Files.h
+include/nn/fs/fs_Mount.h
+include/nn/fs/fs_Rom.h
+include/nn/fs/fs_Save.h
+include/nn/fs/fs_Types.h
+include/nn/fs.h
 include/nn/nn_BitTypes.h
 include/nn/nn.h
 include/nn/nn_Result.h
