@@ -98,7 +98,6 @@ target_sources(nnSdk PUBLIC
     include/nn/os/os_ThreadTypes.h
     include/nn/pl.h
     include/nn/prepo.h
-    include/nn/ro/detail/ro_Elf.h
     include/nn/ro/detail/ro_RoModule.h
     include/nn/ro.h
     include/nn/ro/ro_Types.h

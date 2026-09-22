@@ -1,6 +1,6 @@
 #pragma once
 
-#include <nn/ro/detail/ro_Elf.h>
+#include <elf.h>
 
 namespace nn::ro::detail {
 
