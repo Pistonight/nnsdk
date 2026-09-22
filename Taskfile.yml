@@ -80,6 +80,6 @@ tasks:
         -regextype posix-extended
         -regex '.*\.[ch](\+\+|pp|xx|c|h)?'
         | xargs -P {{numCPU}} -n 1
-        clang-tidy --warnings-as-errors='*' --header-filter='include/nn'
+        clang-tidy --warnings-as-errors='*' --header-filter='include/(nn|nvn|nvnTool|nv)'
         -p build
         --quiet

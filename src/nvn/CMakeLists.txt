@@ -1,13 +1,15 @@
 cmake_minimum_required(VERSION 3.15)
 
-add_library(nvn OBJECT)
+add_library(nvn OBJECT
+    nvn_Impl.cpp
+)
 
 set(NVN_API "C" CACHE STRING "Set NVN platform type")
 set_property(CACHE NVN_API PROPERTY STRINGS "C" "CPP")
 
 target_sources(nvn PUBLIC
   FILE_SET HEADERS
-  BASE_DIRS ${NINTENDOSDK_PATH}/include/
+  BASE_DIRS ${NINTENDOSDK_PATH}/include/ .
   FILES
 
     ${NINTENDOSDK_PATH}/include/nv.h
@@ -25,6 +27,9 @@ target_sources(nvn PUBLIC
     ${NINTENDOSDK_PATH}/include/nvnTool/nvnTool_GlslcInterface.h
 
 # SOURCES_END
+
+    nvn_CppFuncPtrImpl.h
+    nvn_FuncPtrImpl.h
 )
 
 set_target_properties(nvn PROPERTIES
