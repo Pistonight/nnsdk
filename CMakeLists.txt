@@ -9,7 +9,7 @@ target_sources(nnSdk PUBLIC
   BASE_DIRS include/
   FILES
 
-# Run update-sources.sh to update this list
+# Run 'task update-sources' to update this list
 # SOURCES_START
 
 include/nn/bcat/bcat_DeliveryCacheDirectory.h
@@ -22,8 +22,10 @@ include/nn/bcat/detail/bcat_Error.h
 include/nn/bcat/detail/bcat_Ipc.h
 include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
 include/nn/bcat.h
+include/nn/nn_BitTypes.h
 include/nn/nn.h
 include/nn/nn_Result.h
+include/nn/time.h
 include/nn/util/detail/util_ArithmeticImpl.h
 include/nn/util/detail/util_TypeTraits.h
 include/nn/util.h

@@ -1,5 +1,7 @@
 version: '3'
 
+# https://taskfile.dev
+
 vars:
   SOURCES: src include/nn
 
@@ -29,7 +31,20 @@ tasks:
   update-sources:
     desc: Update sources in CMakeLists.txt
     cmds:
-      - ./update-sources.sh
+      - silent: true
+        cmd: |
+          echo '# SOURCES_START' > out
+          echo '' >> out
+
+          LC_ALL=C find include/nn -type f | sort >> out
+
+          echo '' >> out
+          echo '# SOURCES_END' >> out
+
+          sed -i -e '/# SOURCES_START/r out' -e '/# SOURCES_START/,/# SOURCES_END/d' CMakeLists.txt
+          rm out
+          echo 'CMakeLists.txt updated'
+          
 
   clang-format:
     cmds:
