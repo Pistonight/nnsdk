@@ -9,19 +9,41 @@ target_sources(nnSdk PUBLIC
   BASE_DIRS include/
   FILES
 
-  include/nn/bcat.h
-  include/nn/bcat/bcat_DeliveryCache.h
-  include/nn/bcat/bcat_DeliveryCacheDirectory.h
-  include/nn/bcat/bcat_DeliveryCacheFile.h
-  include/nn/bcat/bcat_DeliveryCacheProgress.h
-  include/nn/bcat/bcat_Util.h
-  include/nn/bcat/detail/bcat_DeliveryCacheProgressImpl.h
-  include/nn/bcat/detail/bcat_Error.h
-  include/nn/bcat/detail/bcat_Ipc.h
-  include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
+# Run update-sources.sh to update this list
+# SOURCES_START
 
-  include/nn/nn.h
-  include/nn/nn_Result.h
+include/nn/bcat/bcat_DeliveryCacheDirectory.h
+include/nn/bcat/bcat_DeliveryCacheFile.h
+include/nn/bcat/bcat_DeliveryCache.h
+include/nn/bcat/bcat_DeliveryCacheProgress.h
+include/nn/bcat/bcat_Util.h
+include/nn/bcat/detail/bcat_DeliveryCacheProgressImpl.h
+include/nn/bcat/detail/bcat_Error.h
+include/nn/bcat/detail/bcat_Ipc.h
+include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
+include/nn/bcat.h
+include/nn/nn.h
+include/nn/nn_Result.h
+include/nn/util/detail/util_ArithmeticImpl.h
+include/nn/util/detail/util_TypeTraits.h
+include/nn/util.h
+include/nn/util/util_AccessorBase.h
+include/nn/util/util_Arithmetic.h
+include/nn/util/util_BinaryFormat.h
+include/nn/util/util_BinTypes.h
+include/nn/util/util_BitArray.h
+include/nn/util/util_BitFlagSet.h
+include/nn/util/util_BitPack.h
+include/nn/util/util_BitUtil.h
+include/nn/util/util_BytePtr.h
+include/nn/util/util_IntrusiveList.h
+include/nn/util/util_MathTypes.h
+include/nn/util/util_ResDic.h
+include/nn/util/util_StringUtil.h
+include/nn/util/util_StringView.h
+include/nn/util/util_TypedStorage.h
+
+# SOURCES_END
 )
 
 set_target_properties(nnSdk PROPERTIES VERIFY_INTERFACE_HEADER_SETS ON)
@@ -58,4 +80,6 @@ target_compile_options(nnSdk INTERFACE
     -Wall
     -Wextra
     -Wno-invalid-offsetof
+    -Wno-ignored-qualifiers
+    -Wno-changes-meaning
 )

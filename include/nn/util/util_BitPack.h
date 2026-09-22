@@ -1,7 +1,6 @@
 #pragma once
 
-#include <nn/types.h>
-
+#include <cstdint>
 namespace nn::util {
 
 template <class StorageT, class Tag = void>
@@ -47,8 +46,8 @@ private:
     Tag ReadValue(bool*, int, int) const;
 };
 
-typedef BitPack<u8> BitPack8;
-typedef BitPack<u16> BitPack16;
-typedef BitPack<u32> BitPack32;
+typedef BitPack<uint8_t> BitPack8;
+typedef BitPack<uint16_t> BitPack16;
+typedef BitPack<uint32_t> BitPack32;
 
 }  // namespace nn::util

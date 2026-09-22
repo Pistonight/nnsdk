@@ -126,7 +126,7 @@ public:
         pointer m_Node;
     };
 
-    IntrusiveListImplementation() : m_Root() {}
+    IntrusiveListImplementation() {}
 
     void push_back(reference node) { m_Root.LinkPrev(&node); }
 
@@ -358,7 +358,7 @@ public:
     static const T& GetItem(const IntrusiveListNode& node) { return static_cast<const T&>(node); }
 };
 
-template <class HolderT, IntrusiveListNode HolderT::*Member, class T = HolderT>
+template <class HolderT, IntrusiveListNode HolderT::* Member, class T = HolderT>
 class IntrusiveListMemberNodeTraits {
     friend class IntrusiveList<T, IntrusiveListMemberNodeTraits>;
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <nn/bcat/bcat_Util.h>
+#include <nn/nn_Result.h>
 
 namespace nn::bcat {
 

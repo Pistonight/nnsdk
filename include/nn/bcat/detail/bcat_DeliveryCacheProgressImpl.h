@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdint>
 #include <nn/bcat/bcat_Util.h>
 #include <nn/nn_Result.h>
 
