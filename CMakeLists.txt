@@ -41,6 +41,35 @@ include/nn/fs/fs_Rom.h
 include/nn/fs/fs_Save.h
 include/nn/fs/fs_Types.h
 include/nn/fs.h
+include/nn/hid.h
+include/nn/image.h
+include/nn/init.h
+include/nn/irsensor.h
+include/nn/irsensor/irsensor_ClusteringData.h
+include/nn/irsensor/irsensor_ClusteringProcessorConfig.h
+include/nn/irsensor/irsensor_ClusteringProcessorState.h
+include/nn/irsensor/irsensor_DpdProcessorConfig.h
+include/nn/irsensor/irsensor_DpdProcessorPointingState.h
+include/nn/irsensor/irsensor_DpdProcessorState.h
+include/nn/irsensor/irsensor_HandAnalysisConfig.h
+include/nn/irsensor/irsensor_HandAnalysisMode.h
+include/nn/irsensor/irsensor_ImageTransferProcessorConfig.h
+include/nn/irsensor/irsensor_ImageTransferProcessorFormat.h
+include/nn/irsensor/irsensor_ImageTransferProcessorState.h
+include/nn/irsensor/irsensor_MomentProcessorConfig.h
+include/nn/irsensor/irsensor_MomentProcessorState.h
+include/nn/irsensor/irsensor_MomentStatistic.h
+include/nn/irsensor/irsensor_Rect.h
+include/nn/irsensor/irsensor_System.h
+include/nn/irsensor/irsensor_TeraPluginProcessorConfig.h
+include/nn/irsensor/irsensor_TeraPluginProcessorState.h
+include/nn/mem.h
+include/nn/mem/mem_NumberLineAllocator.h
+include/nn/mem/mem_StandardAllocator.h
+include/nn/nlibsdk.h
+include/nn/nlibsdk/heap/nlibsdk_CentralHeap.h
+include/nn/nlibsdk/heap/nlibsdk_HeapError.h
+include/nn/nlibsdk/nlibsdk_LockFreePlaceHolderPool.h
 include/nn/nn_BitTypes.h
 include/nn/nn.h
 include/nn/nn_Result.h
@@ -80,6 +109,7 @@ include/nn/util/util_ResDic.h
 include/nn/util/util_StringUtil.h
 include/nn/util/util_StringView.h
 include/nn/util/util_TypedStorage.h
+include/nn/xcd.h
 
 # SOURCES_END
 )
