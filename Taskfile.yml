@@ -70,11 +70,13 @@ tasks:
           rm out
 
           if [ -n "$CI" ]; then
-            if ! git diff --quiet -- CMakeLists.txt lib/nvn/CMakeLists.txt; then
-              git diff -- CMakeLists.txt lib/nvn/CMakeLists.txt
-              echo 'error: sources in CMakeLists.txt are out of date. Run `task update-sources` and commit the changes.'
-              exit 1
-            fi
+            for f in CMakeLists.txt lib/nvn/CMakeLists.txt; do
+              if ! git diff --quiet -- "$f"; then
+                git diff -- "$f"
+                echo "error: sources in $f are out of date. Run \`task update-sources\` and commit the changes."
+                exit 1
+              fi
+            done
           fi
           
   clean:

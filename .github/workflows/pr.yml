@@ -1,31 +1,21 @@
 name: pr
-on: [push, pull_request]
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   check:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/pistonight/ubuntu-builder
     steps:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
           submodules: false
-      - uses: jwlawson/actions-setup-cmake@v2
-        with:
-          cmake-version: '4.x'
-      - uses: egor-tensin/setup-clang@v2
-        with:
-          version: "22"
-      - run: |
-          BINDIR="$HOME/.local/bin/ccpp-lint"
-          mkdir -p "$BINDIR"
-          BASE_URL="https://github.com/cpp-linter/clang-tools-static-binaries/releases/latest/download"
-          curl -fsSL "$BASE_URL/clang-format-22_linux-amd64" -o "$BINDIR/clang-format"
-          curl -fsSL "$BASE_URL/clang-tidy-22_linux-amd64" -o "$BINDIR/clang-tidy"
-          chmod +x "$BINDIR/clang-format" "$BINDIR/clang-tidy"
-          echo "$HOME/.local/bin/ccpp-lint" >> "$GITHUB_PATH"
-      - uses: go-task/setup-task@v2
       - name: Run task pr
         run: |
-          clang --version
           clang-format --version
           clang-tidy --version
           task pr
