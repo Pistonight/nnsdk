@@ -1,7 +1,13 @@
 #pragma once
 
 #include <iterator>
+
 #include <nn/util.h>
+
+#if defined(__GNUC__) && !defined(__clang__)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wchanges-meaning"
+#endif
 
 namespace nn::util {
 
@@ -380,3 +386,7 @@ class IntrusiveListMemberNodeTraits {
 };
 
 }  // namespace nn::util
+
+#if defined(__GNUC__) && !defined(__clang__)
+#pragma GCC diagnostic pop
+#endif

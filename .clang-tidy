@@ -30,16 +30,19 @@ Checks: >
   -modernize-loop-convert,
   -modernize-use-trailing-return-type,
   -modernize-use-equals-default,
+  -modernize-use-equals-delete,
   -modernize-use-using,
   -modernize-use-auto,
   -modernize-avoid-c-arrays,
   -modernize-type-traits,
   -modernize-avoid-c-style-cast,
   -modernize-return-braced-init-list,
+  -modernize-macro-to-enum,
   performance-*,
   -performance-enum-size,
   -performance-no-int-to-ptr,
   -performance-unnecessary-copy-initialization,
+  -performance-unnecessary-value-param,
   readability-*,
   -readability-braces-around-statements,
   -readability-use-anyofallof,
@@ -53,7 +56,8 @@ Checks: >
   -readability-redundant-access-specifiers,
   -readability-else-after-return,
   -readability-convert-member-functions-to-static,
-  -readability-named-parameter
+  -readability-named-parameter,
+  -readability-avoid-const-params-in-decls
 
 # needs cleanup:
 # -readability-else-after-return
@@ -63,3 +67,4 @@ Checks: >
 # -modernize-use-using
 # -modernize-use-auto
 # -modernize-use-equals-default,
+# -modernize-use-equals-delete,
