@@ -16,7 +16,7 @@ jobs:
           version: "22"
       - uses: go-task/setup-task@v2
       - run: |
-          cmake --version
           clang --version
-          ninja --version
+          clang-format --version
+          clang-tidy --version
           task pr
