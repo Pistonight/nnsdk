@@ -9,6 +9,17 @@ target_sources(nnSdk PUBLIC
   BASE_DIRS include/
   FILES
 
+  include/nn/bcat.h
+  include/nn/bcat/bcat_DeliveryCache.h
+  include/nn/bcat/bcat_DeliveryCacheDirectory.h
+  include/nn/bcat/bcat_DeliveryCacheFile.h
+  include/nn/bcat/bcat_DeliveryCacheProgress.h
+  include/nn/bcat/bcat_Util.h
+  include/nn/bcat/detail/bcat_DeliveryCacheProgressImpl.h
+  include/nn/bcat/detail/bcat_Error.h
+  include/nn/bcat/detail/bcat_Ipc.h
+  include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
+
   include/nn/nn.h
   include/nn/nn_Result.h
 
@@ -82,4 +93,5 @@ target_compile_options(nnSdk INTERFACE
     -Wall
     -Wextra
     -Wno-invalid-offsetof
+    # -Wextra-semi vapours header have extra semis
 )
