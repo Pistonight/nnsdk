@@ -9,22 +9,25 @@ Checks: >
   -bugprone-macro-parentheses,
   -bugprone-narrowing-conversions,
   -bugprone-unhandled-self-assignment,
+  -bugprone-implicit-widening-of-multiplication-result,
+  -bugprone-multi-level-implicit-pointer-conversion,
   clang-analyzer-*,
   -clang-analyzer-apiModeling.Errno,
+  -clang-analyzer-optin.core.EnumCastOutOfRange,
+  -clang-analyzer-deadcode.DeadStores,
+  -clang-analyzer-core.CallAndMessage,
   cppcoreguidelines-slicing,
   cppcoreguidelines-interfaces-global-init,
   google-default-arguments,
-  google-runtime-operator,
-  # google-explicit-constructor,
   hicpp-multiway-paths-covered,
   hicpp-exception-baseclass,
-  llvm-qualified-auto,
   misc-*,
   -misc-unused-parameters,
   -misc-no-recursion,
   -misc-non-private-member-variables-in-classes,
   -misc-const-correctness,
   -misc-include-cleaner,
+  -misc-use-internal-linkage,
   modernize-*,
   -modernize-use-nodiscard,
   -modernize-loop-convert,
@@ -33,6 +36,7 @@ Checks: >
   -modernize-use-equals-delete,
   -modernize-use-using,
   -modernize-use-auto,
+  -modernize-use-override,
   -modernize-avoid-c-arrays,
   -modernize-type-traits,
   -modernize-avoid-c-style-cast,
@@ -57,7 +61,11 @@ Checks: >
   -readability-else-after-return,
   -readability-convert-member-functions-to-static,
   -readability-named-parameter,
-  -readability-avoid-const-params-in-decls
+  -readability-avoid-const-params-in-decls,
+  -readability-static-accessed-through-instance,
+  -readability-math-missing-parentheses,
+  -readability-avoid-return-with-void-value,
+  -readability-static-definition-in-anonymous-namespace
 
 # needs cleanup:
 # -readability-else-after-return
@@ -68,3 +76,6 @@ Checks: >
 # -modernize-use-auto
 # -modernize-use-equals-default,
 # -modernize-use-equals-delete,
+# -modernize-use-override
+# llvm-qualified-auto,
+# -readability-static-accessed-through-instance

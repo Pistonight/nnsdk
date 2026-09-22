@@ -170,4 +170,5 @@ target_compile_options(nnSdk INTERFACE
     -Wno-invalid-offsetof
 )
 
-add_subdirectory(src/nvn)
+add_subdirectory(lib/nvn)
+add_subdirectory(lib/gfx)
