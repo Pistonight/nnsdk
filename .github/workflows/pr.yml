@@ -1,5 +1,9 @@
 name: pr
-on: [push, pull_request]
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -11,12 +15,16 @@ jobs:
       - uses: jwlawson/actions-setup-cmake@v2
         with:
           cmake-version: '4.x'
-      # - uses: egor-tensin/setup-clang@v2
-      #   with:
-      #     version: "22"
-      - uses: ZhongRuoyu/setup-llvm@v0
+      - name: Install libc++ headers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libc++-dev libc++abi-dev
+      - uses: egor-tensin/setup-clang@v2
         with:
-          llvm-version: "22"
+          version: "22"
+      # - uses: ZhongRuoyu/setup-llvm@v0
+      #   with:
+      #     llvm-version: "22"
       - name: Install clang-format and clang-tidy
         run: |
           BINDIR="$HOME/.local/bin/ccpp-lint"
