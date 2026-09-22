@@ -1,5 +1,4 @@
 /**
- * @file friends.h
  * @brief Friend implementation.
  */
 

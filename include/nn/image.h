@@ -1,3 +1,7 @@
+/**
+ * @brief JPEG decoding library.
+ */
+
 #pragma once
 
 #include <cstdint>

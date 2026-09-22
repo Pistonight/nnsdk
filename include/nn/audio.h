@@ -1,5 +1,4 @@
 /**
- * @file audio.h
  * @brief Audio implementation.
  */
 

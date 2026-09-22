@@ -1,3 +1,7 @@
+/**
+ * @brief Crypto service implementation.
+ */
+
 #pragma once
 
 #include <nn/nn_Result.h>

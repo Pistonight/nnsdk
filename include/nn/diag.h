@@ -1,3 +1,7 @@
+/**
+ * @brief Module, logging, and symbol operations.
+ */
+
 #pragma once
 
 #include <cstddef>

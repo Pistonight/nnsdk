@@ -1,5 +1,4 @@
 /**
- * @file account.h
  * @brief Account service implementation.
  */
 

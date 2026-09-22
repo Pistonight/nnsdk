@@ -1,3 +1,7 @@
+/**
+ * @brief Utility classes for controller devices
+ */
+
 #pragma once
 
 #include <cstdint>

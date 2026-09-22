@@ -1,3 +1,7 @@
+/**
+ * @brief Functions that help process gamepad inputs.
+ */
+
 #pragma once
 
 #include <nn/os/os_MutexTypes.h>
