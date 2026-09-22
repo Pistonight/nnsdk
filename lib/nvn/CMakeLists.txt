@@ -18,13 +18,13 @@ target_sources(nvn PUBLIC
 # Run 'task configure' to update this list
 # SOURCES_START
 
-    ${NINTENDOSDK_PATH}/include/nvn/nvn_CppFuncPtrBase.h
+    ${NINTENDOSDK_PATH}/include/nvn/nvn.h
     ${NINTENDOSDK_PATH}/include/nvn/nvn_Cpp.h
+    ${NINTENDOSDK_PATH}/include/nvn/nvn_CppFuncPtrBase.h
     ${NINTENDOSDK_PATH}/include/nvn/nvn_CppMethods.h
     ${NINTENDOSDK_PATH}/include/nvn/nvn_DeviceConstantsNX.h
     ${NINTENDOSDK_PATH}/include/nvn/nvn_FuncPtrBase.h
     ${NINTENDOSDK_PATH}/include/nvn/nvn_FuncPtrInline.h
-    ${NINTENDOSDK_PATH}/include/nvn/nvn.h
     ${NINTENDOSDK_PATH}/include/nvnTool/nvnTool_GlslcInterface.h
 
 # SOURCES_END

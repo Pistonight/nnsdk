@@ -13,26 +13,27 @@ target_sources(nnSdk PUBLIC
 # SOURCES_START
 
     include/nn/account.h
-    include/nn/album/album_Types.h
     include/nn/album.h
+    include/nn/album/album_Types.h
     include/nn/am.h
     include/nn/aoc.h
     include/nn/applet.h
     include/nn/audio.h
+    include/nn/bcat.h
+    include/nn/bcat/bcat_DeliveryCache.h
     include/nn/bcat/bcat_DeliveryCacheDirectory.h
     include/nn/bcat/bcat_DeliveryCacheFile.h
-    include/nn/bcat/bcat_DeliveryCache.h
     include/nn/bcat/bcat_DeliveryCacheProgress.h
     include/nn/bcat/bcat_Util.h
     include/nn/bcat/detail/bcat_DeliveryCacheProgressImpl.h
     include/nn/bcat/detail/bcat_Error.h
     include/nn/bcat/detail/bcat_Ipc.h
     include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
-    include/nn/bcat.h
     include/nn/crypto.h
     include/nn/diag.h
     include/nn/err.h
     include/nn/friends.h
+    include/nn/fs.h
     include/nn/fs/fs_Bcat.h
     include/nn/fs/fs_Directories.h
     include/nn/fs/fs_Files.h
@@ -40,7 +41,6 @@ target_sources(nnSdk PUBLIC
     include/nn/fs/fs_Rom.h
     include/nn/fs/fs_Save.h
     include/nn/fs/fs_Types.h
-    include/nn/fs.h
     include/nn/hid.h
     include/nn/image.h
     include/nn/init.h
@@ -74,21 +74,21 @@ target_sources(nnSdk PUBLIC
     include/nn/nlibsdk/heap/nlibsdk_CentralHeap.h
     include/nn/nlibsdk/heap/nlibsdk_HeapError.h
     include/nn/nlibsdk/nlibsdk_LockFreePlaceHolderPool.h
+    include/nn/nn.h
     include/nn/nn_ApplicationId.h
     include/nn/nn_BitTypes.h
-    include/nn/nn.h
-    include/nn/nnmusl.h
     include/nn/nn_Result.h
+    include/nn/nnmusl.h
     include/nn/oe.h
-    include/nn/os/detail/os_InternalConditionVariable.h
-    include/nn/os/detail/os_InternalConditionVariable-os.horizon.h
-    include/nn/os/detail/os_InternalCriticalSection.h
-    include/nn/os/detail/os_InternalCriticalSection-os.horizon.h
-    include/nn/os/detail/os_ThreadTypes-os.horizon.h
     include/nn/os.h
+    include/nn/os/detail/os_InternalConditionVariable-os.horizon.h
+    include/nn/os/detail/os_InternalConditionVariable.h
+    include/nn/os/detail/os_InternalCriticalSection-os.horizon.h
+    include/nn/os/detail/os_InternalCriticalSection.h
+    include/nn/os/detail/os_ThreadTypes-os.horizon.h
     include/nn/os/os_ConditionVariableCommon.h
-    include/nn/os/os_EventCommon.h
     include/nn/os/os_Event.h
+    include/nn/os/os_EventCommon.h
     include/nn/os/os_EventTypes.h
     include/nn/os/os_MessageQueue.h
     include/nn/os/os_MessageQueueTypes.h
@@ -98,8 +98,8 @@ target_sources(nnSdk PUBLIC
     include/nn/os/os_ThreadTypes.h
     include/nn/pl.h
     include/nn/prepo.h
-    include/nn/ro/detail/ro_RoModule.h
     include/nn/ro.h
+    include/nn/ro/detail/ro_RoModule.h
     include/nn/ro/ro_Types.h
     include/nn/settings.h
     include/nn/sf.h
@@ -109,13 +109,13 @@ target_sources(nnSdk PUBLIC
     include/nn/svc.h
     include/nn/swkbd.h
     include/nn/time.h
+    include/nn/util.h
     include/nn/util/detail/util_ArithmeticImpl.h
     include/nn/util/detail/util_TypeTraits.h
-    include/nn/util.h
     include/nn/util/util_AccessorBase.h
     include/nn/util/util_Arithmetic.h
-    include/nn/util/util_BinaryFormat.h
     include/nn/util/util_BinTypes.h
+    include/nn/util/util_BinaryFormat.h
     include/nn/util/util_BitArray.h
     include/nn/util/util_BitFlagSet.h
     include/nn/util/util_BitPack.h

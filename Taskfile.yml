@@ -44,12 +44,14 @@ tasks:
 
   update-sources:
     desc: Update sources in CMakeLists.txt
+    env:
+      LC_ALL: C
     cmds:
       - silent: true
         cmd: |
           echo '# SOURCES_START' > out
           echo '' >> out
-          LC_ALL=C find include/nn -path include/nn/gfx -prune -o -type f -print | sort >> out
+          find include/nn -path include/nn/gfx -prune -o -type f -print | sort >> out
           echo '' >> out
           echo '# SOURCES_END' >> out
           sed -i -e 's/^include/    include/' out
@@ -58,7 +60,7 @@ tasks:
 
           echo '# SOURCES_START' > out
           echo '' >> out
-          LC_ALL=C find include/nvn include/nvnTool -type f | sort >> out
+          find include/nvn include/nvnTool -type f | sort >> out
           echo '' >> out
           echo '# SOURCES_END' >> out
           sed -i -e 's/^include/    ${NINTENDOSDK_PATH}\/include/' out
