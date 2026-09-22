@@ -30,10 +30,6 @@ void __nnDetailNintendoSdkRuntimeObjectFile();
 void __nnDetailNintendoSdkNsoFileRefer();
 
 // NOLINTNEXTLINE(bugprone-reserved-identifier)
-void __nnmusl_init_dso_0();
-// NOLINTNEXTLINE(bugprone-reserved-identifier)
-void __nnmusl_fini_dso_0();
-// NOLINTNEXTLINE(bugprone-reserved-identifier)
 void __nnDetailNintendoSdkNsoFile_0();
 
 #ifdef __cplusplus

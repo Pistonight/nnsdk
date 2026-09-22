@@ -66,12 +66,16 @@ include/nn/irsensor/irsensor_TeraPluginProcessorState.h
 include/nn/mem.h
 include/nn/mem/mem_NumberLineAllocator.h
 include/nn/mem/mem_StandardAllocator.h
+include/nn/nfp.h
+include/nn/nfp/nfp.h
+include/nn/nfp/nfp_Types.h
 include/nn/nlibsdk.h
 include/nn/nlibsdk/heap/nlibsdk_CentralHeap.h
 include/nn/nlibsdk/heap/nlibsdk_HeapError.h
 include/nn/nlibsdk/nlibsdk_LockFreePlaceHolderPool.h
 include/nn/nn_BitTypes.h
 include/nn/nn.h
+include/nn/nnmusl.h
 include/nn/nn_Result.h
 include/nn/os/detail/os_InternalConditionVariable.h
 include/nn/os/detail/os_InternalConditionVariable-os.horizon.h

@@ -5,3 +5,5 @@
 - util/ headers reorganized
 - nlibsdk/ headers reorgnized
 - mem headers reorganized
+- nfp/ headers reorganized
+- init and nnmusl/ headers reorganized
