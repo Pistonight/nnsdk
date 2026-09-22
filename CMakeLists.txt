@@ -13,6 +13,12 @@ target_sources(nnSdk PUBLIC
 # SOURCES_START
 
 include/nn/account.h
+include/nn/album/album_Types.h
+include/nn/album.h
+include/nn/am.h
+include/nn/aoc.h
+include/nn/applet.h
+include/nn/audio.h
 include/nn/bcat/bcat_DeliveryCacheDirectory.h
 include/nn/bcat/bcat_DeliveryCacheFile.h
 include/nn/bcat/bcat_DeliveryCache.h
