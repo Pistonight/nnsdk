@@ -12,6 +12,7 @@ target_sources(nnSdk PUBLIC
 # Run 'task update-sources' to update this list
 # SOURCES_START
 
+include/nn/account.h
 include/nn/bcat/bcat_DeliveryCacheDirectory.h
 include/nn/bcat/bcat_DeliveryCacheFile.h
 include/nn/bcat/bcat_DeliveryCache.h
