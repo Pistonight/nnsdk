@@ -29,6 +29,7 @@ include/nn/bcat/detail/bcat_Error.h
 include/nn/bcat/detail/bcat_Ipc.h
 include/nn/bcat/detail/bcat_ShimLibraryGlobal.h
 include/nn/bcat.h
+include/nn/crypto.h
 include/nn/fs/fs_Bcat.h
 include/nn/fs/fs_Directories.h
 include/nn/fs/fs_Files.h
