@@ -8,7 +8,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/open-ead/ubuntu-builder
+      image: ghcr.io/pistonight/ubuntu-builder
     steps:
       - uses: actions/checkout@v7
         with:
