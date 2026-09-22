@@ -155,4 +155,4 @@ set_target_properties(nn_gfx PROPERTIES
 
 target_include_directories(nn_gfx PUBLIC ${NINTENDOSDK_PATH}/include/)
 
-target_link_libraries(nn_gfx PUBLIC nvn)
+target_link_libraries(nn_gfx PUBLIC nvn nnSdk)

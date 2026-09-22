@@ -181,7 +181,7 @@ namespace nn {
                     return result.GetModule() == Module && DescriptionStart <= result.GetDescription() && result.GetDescription() < DescriptionEnd;
                 }
 
-                friend bool operator <=(Result result, ErrorRange _) noexcept {
+                friend bool operator <=(Result result, ErrorRange /*unused*/) noexcept {
                     return Includes(result);
                 }
         };

@@ -714,7 +714,10 @@ void CommandBufferImpl<ApiVariationNvn8>::ClearColorTarget(
 
     if (pNvnTextureView) {
         int levelCount;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused"
         NVNboolean result;
+#pragma clang diagnostic pop
 
         result = nvnTextureViewGetLevels(pNvnTextureView, &level, &levelCount);
         result = nvnTextureViewGetTarget(pNvnTextureView, &target);

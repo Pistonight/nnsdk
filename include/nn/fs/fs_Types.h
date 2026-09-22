@@ -1,8 +1,11 @@
 #pragma once
 
 #include <cstdint>
+#include <vapours/results/fs_results.hpp>
 
 namespace nn::fs {
+
+using namespace ams::fs;  // for errors
 
 typedef uint64_t UserId;
 
