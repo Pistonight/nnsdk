@@ -1,0 +1,33 @@
+version: '3'
+
+tasks:
+  configure:
+    desc: Configure CMake
+    cmds:
+      - cmake -G Ninja -B build -S . -DNN_SDK=1.2.3 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  build:
+    desc: Check the project builds
+    cmds:
+      - cmake --build build --target all_verify_header_sets
+
+  check:
+    desc: Run clang-format and clang-tidy checks
+    cmds:
+      - task: _clang-format
+        vars:
+          ARGS: -n -Werror
+  fix:
+    desc: Run clang-format to format the code
+    cmds:
+      - task: _clang-format
+        vars:
+          ARGS: -i
+
+  _clang-format:
+    cmds:
+      - > 
+        find src include/nn
+        -regextype posix-extended
+        -regex '.*\.[ch](\+\+|pp|xx|c|h)?'
+        | xargs -P {{numCPU}} -n 1
+        clang-format {{.ARGS}}
