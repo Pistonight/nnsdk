@@ -103,6 +103,12 @@ include/nn/ro/detail/ro_RoModule.h
 include/nn/ro.h
 include/nn/ro/ro_Types.h
 include/nn/settings.h
+include/nn/sf.h
+include/nn/sf/hipc.h
+include/nn/socket.h
+include/nn/ssl.h
+include/nn/svc.h
+include/nn/swkbd.h
 include/nn/time.h
 include/nn/util/detail/util_ArithmeticImpl.h
 include/nn/util/detail/util_TypeTraits.h
