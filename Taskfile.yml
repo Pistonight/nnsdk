@@ -66,6 +66,14 @@ tasks:
           echo 'lib/nvn/CMakeLists.txt updated'
 
           rm out
+
+          if [ -n "$CI" ]; then
+            if ! git diff --quiet -- CMakeLists.txt lib/nvn/CMakeLists.txt; then
+              git diff -- CMakeLists.txt lib/nvn/CMakeLists.txt
+              echo 'error: sources in CMakeLists.txt are out of date. Run `task update-sources` and commit the changes.'
+              exit 1
+            fi
+          fi
           
   clean:
     desc: Remove CMake build files

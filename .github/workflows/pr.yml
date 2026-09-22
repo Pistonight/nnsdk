@@ -1,0 +1,18 @@
+name: pr
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          submodules: false
+      - uses: jwlawson/actions-setup-cmake@v2
+        with:
+          cmake-version: '4.x'
+      - uses: KyleMayes/install-llvm-action@v2
+        with:
+          version: "22"
+      - uses: go-task/setup-task@v2
+      - run: task pr
